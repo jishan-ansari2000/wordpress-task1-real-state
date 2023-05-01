@@ -1,0 +1,804 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sidePadding {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.headingTitle {
+  display: inline-block;
+  padding: 12px 24px;
+  text-align: center;
+  background: #f8f9fe;
+  border: 0;
+}
+
+.headingTitleText {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #69b99d;
+}
+
+.subText1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+
+  color: #73788c;
+  margin: 0;
+}
+
+.sectionHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.sectionHeadingLeft {
+  max-width: 500px;
+}
+
+.sectionHeading {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.5px;
+  color: #054457;
+  margin: 16px 0;
+}
+
+.moreLink {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.moreLink:hover {
+  scale: 1.02;
+}
+
+.moreLink:active {
+  scale: 1;
+}
+
+.moreLinkIconBox {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #69b99d;
+  color: #fff;
+}
+
+/* ******* btn hover and active effect ********* */
+
+.btnDark {
+  cursor: pointer;
+  background-color: #69b99d !important;
+  border: 0 !important;
+  color: #fefeff !important;
+}
+
+.btnDark:hover {
+  background-color: #5aa98d !important;
+}
+
+.btnDark:active {
+  background-color: #569a82 !important;
+}
+
+.btnLight:hover,
+.btnLight:active {
+  background-color: #69b99d;
+  color: #fefeff !important;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
+/* ******* Navbar *************** */
+
+.header {
+  /**/
+  background-color: #f5f5f5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 10;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.navLogo {
+  height: 45px;
+  display: linline-block;
+}
+
+.navLogo > img {
+  height: 100%;
+}
+
+.logoContainer .icon {
+  display: none;
+  padding: 14px 0;
+  color: #4ba586;
+}
+
+/* ********** */
+
+.main-menu-container {
+  display: flex;
+}
+
+.navbar_menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+
+.navbar_menu > li.menu-item {
+  list-style: none;
+  padding: 14px 15px 14px 24px;
+  cursor: pointer;
+}
+
+.navbar_menu > li.menu-item > a {
+  text-align: center;
+  text-decoration: none;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #8e8e8e;
+}
+
+.navbar_menu > li.menu-item > a > p {
+  margin: 0;
+}
+
+.navLinkDot {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #04aa6d;
+  margin: 5px auto 0;
+}
+
+/* for hovering menu */
+
+.navbar_menu > li.menu-item:hover .navLinkDot {
+  display: block;
+}
+
+.navbar_menu > li.menu-item:hover {
+  padding-top: 0;
+}
+
+.navbar_menu > li.menu-item:hover a {
+  color: #04aa6d;
+  opacity: 1;
+}
+
+/* for active menu */
+.navbar_menu > li.current-menu-item .navLinkDot {
+  display: block;
+}
+
+.navbar_menu > li.current-menu-item {
+  padding-top: 0;
+}
+
+.navbar_menu > li.current-menu-item a {
+  color: #04aa6d;
+  opacity: 1;
+}
+
+.navBtn {
+  background: #f5f5f5;
+  padding: 16px 15px 15px;
+  font-weight: 500;
+  color: #69b99d;
+  border: 0;
+  cursor: pointer;
+  width: 180px;
+  margin: 0;
+}
+
+.navBtn:hover {
+  background: #69b99d;
+  color: #fefeff;
+}
+
+/* *************** Home *************** */
+
+.home-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: #f5f5f5;
+
+  position: relative;
+}
+
+.homeImgBox {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 650px;
+}
+
+.homeImgBox img {
+  width: 100%;
+}
+
+.homePriceType {
+  display: flex;
+  margin-top: 60px;
+}
+
+.homePriceType > * {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.0025em;
+  color: #69b99d;
+
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.homePriceType > *:first-child {
+  background: #fefeff;
+}
+
+.homePriceBox {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 24px 24px;
+  background: #fefeff;
+  box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+  width: fit-content;
+}
+
+.homePriceBox > * {
+  padding-right: 48px;
+  padding-top: 24px;
+}
+
+.homePriceBox > *:nth-child(4) {
+  padding-right: 0px;
+}
+
+.homePriceSubText {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.0025em;
+}
+
+.angleIcon {
+  display: inline-block;
+  margin-left: 10px;
+  color: #1f2744;
+  font-weight: lighter;
+  position: relative;
+  top: 2px;
+}
+
+/* ***************** Discover ************************** */
+
+.discover {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.cardContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cardContainer .card {
+  margin-top: 30px;
+  width: 31%;
+  min-width: 300px;
+  padding: 12px;
+  background: #fefeff;
+  border: 1px solid #dedcda;
+}
+
+.card img {
+  width: 100%;
+}
+
+.cardHeading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.0025em;
+  color: #1f2744;
+  margin: 12px 0;
+}
+
+.cardPricing {
+  display: flex;
+  align-items: center;
+}
+
+.cardPricing > *:nth-child(2) {
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+}
+
+.cardBtn {
+  width: 100%;
+  border: 1px solid #69b99d;
+  padding: 12px 48px;
+  background: transparent;
+  color: #69b99d;
+  font-weight: 500;
+  margin-top: 12px;
+  cursor: pointer;
+  /* transition: all 0.5s linear; */
+}
+
+/* *************************advante*************** */
+
+.advante {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f5f5f5;
+}
+
+.advanteCardContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advanteCard {
+  padding: 12px;
+  width: 31%;
+  min-width: 250px;
+  margin-top: 50px;
+}
+
+.advanteCardHeading {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0.5px;
+  color: #054457;
+  margin: 16px 0;
+}
+
+/* ************************ About Us ********************** */
+
+.about {
+  padding-top: 200px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about > * {
+  width: 48%;
+}
+
+.aboutLeft {
+  position: relative;
+}
+
+.aboutLeftBottom {
+  position: absolute;
+  right: 0;
+  left: 100px;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1;
+
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutLeftBottom > * {
+  display: flex;
+  align-items: center;
+}
+
+.aboutPrice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 0.0025em;
+  margin: 5px 0;
+  color: #054457;
+}
+
+.aboutLeftTop {
+  position: absolute;
+  left: 100px;
+  top: -80px;
+  text-align: center;
+  background: #fefeff;
+  box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+  padding: 16px 30px 30px 30px;
+}
+
+.tickSquareImg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.aboutRatingText {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: 0.0025em;
+  margin: 0;
+  color: #054457;
+}
+
+.ratingBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.ratingBox > * {
+  width: 15px;
+}
+
+.aboutLeft img {
+  width: 100%;
+}
+
+.aboutBtn {
+  background: #69b99d;
+  box-shadow: 24px 24px 65px rgba(81, 140, 119, 0.24);
+  padding: 18px 48px;
+  font-weight: 500;
+  color: #fefeff;
+  border: 0;
+  margin-top: 50px;
+}
+
+/* ************* testimonial *********** */
+
+.testimonial {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.testimonialSubHeading {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.0025em;
+  color: #1f2744;
+}
+
+.cardContainer .testimonialCard {
+  padding: 20px;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+.UserProfileName {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #0b2e29;
+  margin: 2px 0 2px 12px;
+}
+
+.UserProfileProfession {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: #767676;
+  margin: 2px 0 2px 12px;
+}
+
+/* **************** Footer ******************* */
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background: #f5f5f5;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer > * {
+  margin-top: 50px;
+  min-width: 200px;
+}
+
+.footerSubHeading {
+  font-size: 20px;
+  color: #0b2e29;
+  margin-bottom: 16px;
+}
+
+.follow_us_link_container .wp-block-heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+
+  margin: 0;
+  font-size: 20px;
+  color: #0b2e29;
+  margin-bottom: 16px;
+}
+
+.footerInput {
+  padding: 8px 12px;
+  border: 0;
+  outline: none;
+  color: #575757;
+  background-color: #fefeff;
+  width: 100%;
+}
+
+.footerInput::placeholder {
+  color: #d7d7d7;
+  opacity: 1;
+}
+
+.footerBtn {
+  background: #69b99d;
+  box-shadow: 0px 0px 65px rgba(105, 185, 157, 0.48);
+  color: #fefeff;
+  font-weight: 500;
+  width: 88px;
+  height: 42px;
+  border: 0;
+  cursor: pointer;
+}
+
+.footer-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.footerLink {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 16px;
+  font-family: "DM Sans", sans-serif;
+  color: #575757;
+}
+
+/* ********************************************** */
+
+.wp-block-buttons .wp-block-button__link {
+  background: #f8f9f9;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 8px;
+}
+
+.wp-block-buttons .wp-block-button__link:hover {
+  background-color: #eaeaea !important;
+}
+
+.wp-block-buttons .wp-block-button__link:active {
+  background-color: #d8d8d8 !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sidePadding {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /* *********Navbar************ */
+
+  .header {
+    display: block;
+  }
+
+  .main-menu-container {
+    display: none;
+  }
+
+  .logoContainer a.icon {
+    display: block;
+  }
+
+  .navbar_menu.responsive {
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+  }
+
+  .main-menu-container {
+    margin-top: 24px;
+  }
+
+  .main-menu-container.responsive {
+    display: block;
+  }
+
+  .main-menu-container.responsive > .navBtn {
+    display: block;
+  }
+
+  .about {
+    padding-top: 100px;
+  }
+
+  .about > * {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about > *:nth-child(1) {
+    margin-top: 150px;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .sidePadding {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .sectionHeading {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+  }
+
+  .aboutRatingText {
+    font-size: 56px;
+  }
+
+  .aboutPrice {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidePadding {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .cardContainer .card {
+    margin: 30px auto 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidePadding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .homeImgBox {
+    width: 100%;
+  }
+
+  .advanteCard {
+    padding: 12px;
+    width: 31%;
+    min-width: 300px;
+    margin: 30px auto 0;
+  }
+
+  .aboutPrice {
+    font-size: 32px;
+  }
+
+  .about > *:nth-child(1) {
+    margin-top: 150px;
+    margin-bottom: 75px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .aboutLeftBottom {
+    left: 0px;
+    bottom: -75px;
+    padding: 10px;
+  }
+
+  .aboutLeftTop {
+    left: 0px;
+    top: -80px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .sidePadding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .advanteCard {
+    width: 100%;
+  }
+
+  .aboutPrice {
+    font-size: 28px;
+  }
+}
